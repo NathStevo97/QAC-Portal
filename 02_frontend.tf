@@ -1,9 +1,9 @@
 resource "google_compute_instance" "frontend" {
 	name = "${var.name}-${var.frontend}"
 	machine_type = "${var.machine_type}"
-	zone = "{var.zone}"
+	zone = "${var.zone}"
 	tags = ["${var.name}-${var.frontend}"]
-	book_disk {
+	boot_disk {
 		initialize_params {
 			image = "${var.image}"
 		}

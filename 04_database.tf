@@ -2,7 +2,7 @@ resource "google_compute_instance" "database" {
 	name = "${var.name}-${var.database}"#
 	machine_type = "${var.machine_type}"
 	zone = "${var.zone}"
-	tags = ["{var.name}-${var.database}"]
+	tags = ["${var.name}-${var.database}"]
 	boot_disk {
 		initialize_params {
 			image = "${var.image}"
