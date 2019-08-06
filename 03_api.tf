@@ -25,12 +25,6 @@ resource "google_compute_instance" "api" {
 	}
 	
 	provisioner "remote-exec" {
-		inline = [
-			 "echo test passed"
-			 ]
-	}
-	
-	provisioner "remote-exec" {
-		script = ""
+		script = "${var.dependencies-script}"
 	}
 }

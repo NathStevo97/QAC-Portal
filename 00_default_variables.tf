@@ -74,8 +74,8 @@ variable "install_packages" {
 	}
 }
 
-variable "scripts" {
-	default = []
+variable "dependencies-script" {
+	default = "scripts/dependencies-setup.sh"
 }
 
 variable "allowed_ports" {
